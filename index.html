@@ -13,49 +13,41 @@
 			<div id="overlay"></div>
 			<div id="main">
 
-				<!-- Header -->
-					<header id="header">
+				<header id="header">
 						<h1 class="gradient-text">Alexandre CHEN</h1>
 						<p>Network and System Administrator</p>
 						<nav>
 							<ul>
-								<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
 								<li><a href="https://github.com/azn-style" class="icon brands fa-github"><span class="label">Github</span></a></li>
 								<li><a href="https://www.linkedin.com/in/chenalexandre/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
 							</ul>
 						</nav>
 					</header>
 
-				<!-- Footer -->
-					<footer id="footer">
-					</footer>
+				<footer id="footer">
+				</footer>
 
 			</div>
 		</div>
 
 		<script>
-			// Supprime la classe 'is-preload' après le chargement
 			window.onload = function() { 
 				document.body.classList.remove('is-preload'); 
 			};
-
-			// Désactive le défilement tactile
 			window.ontouchmove = function() { 
 				return false; 
 			};
-
-			// Réinitialise le scroll après un changement d'orientation
 			window.onorientationchange = function() { 
 				document.body.scrollTop = 0; 
 			};
 
-			// Ajout dynamique du script Umami via CORS Anywhere
 			(function() {
 				const script = document.createElement('script');
 				script.src = "https://cors-anywhere.herokuapp.com/https://umami.alexlab.fr/script.js";
 				script.async = true;
 				script.defer = true;
 				script.setAttribute("data-website-id", "e22b2cc7-9c26-4716-9f06-2b334c5cfe08");
+				script.setAttribute("X-Requested-With", "XMLHttpRequest");
 				document.head.appendChild(script);
 			})();
 		</script>
