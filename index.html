@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Alexandre CHEN</title>
@@ -11,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script async defer data-website-id="e22b2cc7-9c26-4716-9f06-2b334c5cfe08" src="https://cors-anywhere.herokuapp.com/https://umami.alexlab.fr/script.js" ></script>
 	</head>
 	<body class="is-preload">
 		<div id="wrapper">
@@ -38,10 +32,32 @@
 
 			</div>
 		</div>
+
 		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
+			// Supprime la classe 'is-preload' après le chargement
+			window.onload = function() { 
+				document.body.classList.remove('is-preload'); 
+			};
+
+			// Désactive le défilement tactile
+			window.ontouchmove = function() { 
+				return false; 
+			};
+
+			// Réinitialise le scroll après un changement d'orientation
+			window.onorientationchange = function() { 
+				document.body.scrollTop = 0; 
+			};
+
+			// Ajout dynamique du script Umami via CORS Anywhere
+			(function() {
+				const script = document.createElement('script');
+				script.src = "https://cors-anywhere.herokuapp.com/https://umami.alexlab.fr/script.js";
+				script.async = true;
+				script.defer = true;
+				script.setAttribute("data-website-id", "e22b2cc7-9c26-4716-9f06-2b334c5cfe08");
+				document.head.appendChild(script);
+			})();
 		</script>
 	</body>
 </html>
